@@ -84,9 +84,8 @@ services:
     restart: unless-stopped
     mem_limit: 128m
     cpus: 0.5
-    ports:
-      - "3000:80"
-      - "443:443"
+    expose:
+      - "443"
     depends_on:
       api:
         condition: service_healthy
